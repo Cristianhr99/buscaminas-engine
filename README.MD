@@ -126,4 +126,11 @@ Jugador --> CU6
 
 ## Bitácora de Uso de IA
 
-(Pendiente)
+Durante el desarrollo del proyecto se utilizó ChatGPT como herramienta de apoyo para:
+
+- Generación de documentación técnica.
+- Creación de diagramas UML en formato Mermaid.
+- Resolución de dudas relacionadas con Git y GitHub.
+- Revisión de estructura y organización del proyecto.
+
+Todas las decisiones finales de diseño, implementación y validación fueron revisadas por el estudiante.
