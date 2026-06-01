@@ -19,7 +19,58 @@ El sistema está compuesto por seis clases principales:
 
 ## Diagrama de Clases UML
 
-(Pendiente)
+```mermaid
+classDiagram
+
+class Main{
+    +main(String[] args)
+}
+
+class MotorJuego{
+    -String estado
+    -List~EntidadVideojuego~ entidades
+    +iniciarPartida()
+    +pausarPartida()
+    +reanudarPartida()
+    +gameOver()
+    +actualizar()
+    +quickSave()
+}
+
+class EntidadVideojuego{
+    #String nombre
+    #int x
+    #int y
+    #int ancho
+    #int alto
+    #int estado
+    #String imagen
+}
+
+class Celda{
+    -boolean tieneMina
+    -boolean descubierta
+    +descubrir()
+}
+
+class GestorEntradas{
+    +procesarEntrada(String comando)
+}
+
+class SistemaPuntuacion{
+    -int puntuacion
+    -int logros
+    +sumarPuntos(int puntos)
+    +desbloquearLogro(String nombre)
+}
+
+EntidadVideojuego <|-- Celda
+
+MotorJuego --> EntidadVideojuego
+MotorJuego --> SistemaPuntuacion
+Main --> MotorJuego
+Main --> GestorEntradas
+```
 
 ## Diagrama de Casos de Uso UML
 
