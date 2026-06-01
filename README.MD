@@ -96,7 +96,33 @@ Jugador --> CU6
 
 ## Casos de Uso
 
-(Pendiente)
+### CU-01 Iniciar Partida
+
+| Campo | Descripción |
+|---------|---------|
+| Nombre | CU-01 Iniciar Partida |
+| Objetivo | Comenzar una nueva partida de Buscaminas. |
+| Actor Principal | Jugador |
+| Precondiciones | El juego debe estar en estado MENÚ. |
+| Flujo Principal | 1. El jugador selecciona iniciar partida.<br>2. El sistema genera el tablero.<br>3. El estado cambia a JUGANDO. |
+| Flujos Alternativos | Si ya existe una partida activa, se informa al usuario. |
+| Postcondiciones | El tablero queda preparado para jugar. |
+| Reglas de Negocio | No puede iniciarse una partida si ya hay una en curso. |
+
+---
+
+### CU-02 Descubrir Celda
+
+| Campo | Descripción |
+|---------|---------|
+| Nombre | CU-02 Descubrir Celda |
+| Objetivo | Descubrir una casilla del tablero. |
+| Actor Principal | Jugador |
+| Precondiciones | Debe existir una partida activa. |
+| Flujo Principal | 1. El jugador selecciona una celda.<br>2. El sistema verifica si contiene mina.<br>3. Se actualiza el estado de la celda.<br>4. Se recalcula la puntuación. |
+| Flujos Alternativos | Si la celda contiene una mina, se produce Game Over. |
+| Postcondiciones | La celda queda marcada como descubierta. |
+| Reglas de Negocio | Una celda descubierta no puede descubrirse nuevamente. |
 
 ## Bitácora de Uso de IA
 
