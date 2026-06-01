@@ -74,7 +74,25 @@ Main --> GestorEntradas
 
 ## Diagrama de Casos de Uso UML
 
-(Pendiente)
+```mermaid
+flowchart LR
+
+Jugador((Jugador))
+
+CU1[Iniciar Partida]
+CU2[Descubrir Celda]
+CU3[Pausar Partida]
+CU4[Reanudar Partida]
+CU5[Guardar Partida]
+CU6[Finalizar Partida]
+
+Jugador --> CU1
+Jugador --> CU2
+Jugador --> CU3
+Jugador --> CU4
+Jugador --> CU5
+Jugador --> CU6
+```
 
 ## Casos de Uso
 
